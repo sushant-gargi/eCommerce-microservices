@@ -62,6 +62,25 @@ public class OrdersService {
         return new OrderRequestDto();
     }
 
+    public OrderRequestDto cancelOrder(Long orderId) {
+        log.info("Cancelling order with ID: {}", orderId);
+
+        Orders order = orderRepository.findById(orderId).orElseThrow(() ->
+                new RuntimeException("Order not found with id: " + orderId));
+
+        if(order.getOrderStatus() == OrderStatus.CANCELLED) {
+            throw new RuntimeException("Order is already cancelled");
+        }
+
+        order.setOrderStatus(OrderStatus.CANCELLED);
+        orderRepository.save(order);
+
+        OrderRequestDto orderRequestDto = modelMapper.map(order, OrderRequestDto.class);
+        inventoryOpenFeignClient.restockItems(orderRequestDto);
+
+        return orderRequestDto;
+    }
+
 }
 
 

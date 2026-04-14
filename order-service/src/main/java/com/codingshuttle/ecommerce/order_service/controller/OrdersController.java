@@ -43,4 +43,11 @@ public class OrdersController {
         OrderRequestDto order = orderService.getOrderById(id);
         return ResponseEntity.ok(order);  // Returns 200 OK with the order
     }
+
+    @PutMapping("/cancel-order/{id}")
+    public ResponseEntity<OrderRequestDto> cancelOrder(@PathVariable Long id) {
+        log.info("Cancelling order with ID: {} via controller", id);
+        OrderRequestDto orderRequestDto = orderService.cancelOrder(id);
+        return ResponseEntity.ok(orderRequestDto);
+    }
 }
