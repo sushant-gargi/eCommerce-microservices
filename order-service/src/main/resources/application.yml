@@ -20,6 +20,10 @@ resilience4j:
       inventoryRetry:
         baseConfig: default
         waitDuration: 200ms
+      shippingRetry:
+        baseConfig: default
+        maxRetryAttempts: 3
+        waitDuration: 200ms
   ratelimiter:
     instances:
       inventoryRateLimiter:
