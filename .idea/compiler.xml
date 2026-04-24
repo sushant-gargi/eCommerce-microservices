@@ -8,17 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="config-server" />
         <module name="order-service" />
         <module name="inventory-service" />
         <module name="discovery-service" />
-      </profile>
-      <profile name="Annotation profile for shipping-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
-        </processorPath>
         <module name="shipping-service" />
       </profile>
     </annotationProcessing>
@@ -26,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="order-service" options="-parameters" />

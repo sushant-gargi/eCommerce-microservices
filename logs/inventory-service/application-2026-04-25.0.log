@@ -1,0 +1,11 @@
+25-04-2026 00:03:15.555 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:08:16.766 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:09:46.059 [http-nio-9020-exec-5] [69ebb8f0a4362b80986f5706fd6b54c3-a49cc0a7ce060a33] INFO  inventory-service-c.c.e.i.service.ProductService.getAllInventory - Fetching all inventory items
+25-04-2026 00:13:16.942 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:17:25.167 [http-nio-9020-exec-7] [69ebbabcc8cfa31b8a16060b5720a04f-548d0450fa4a0d1c] INFO  inventory-service-c.c.e.i.controller.ProductController.fetchFromOrdersService - Sushant
+25-04-2026 00:18:12.504 [http-nio-9020-exec-8] [69ebbae861cf4a6a324f48889eee7552-be299f6ab35413fd] INFO  inventory-service-c.c.e.i.service.ProductService.reduceStocks - Reducing the stocks
+25-04-2026 00:18:17.340 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:19:15.518 [http-nio-9020-exec-1] [69ebbb2b000bdf7204b1c9cbbdca0924-14c8cf90ae858bc9] INFO  inventory-service-c.c.e.i.service.ProductService.getAllInventory - Fetching all inventory items
+25-04-2026 00:20:16.073 [http-nio-9020-exec-2] [69ebbb67f8cde32787cd6f2a54afc5b3-3907512194a374a3] INFO  inventory-service-c.c.e.i.service.ProductService.restockItems - Restocking items
+25-04-2026 00:20:26.080 [http-nio-9020-exec-4] [69ebbb72bd07abd6568d4c3111832cba-8212e912c0ee466f] INFO  inventory-service-c.c.e.i.service.ProductService.getAllInventory - Fetching all inventory items
+25-04-2026 00:23:17.360 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

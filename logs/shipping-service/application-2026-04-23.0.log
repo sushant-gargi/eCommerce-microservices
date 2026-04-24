@@ -1,0 +1,2 @@
+23-04-2026 19:02:18.929 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2d14h4m43s137ms885µs300ns).
+23-04-2026 19:02:23.880 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

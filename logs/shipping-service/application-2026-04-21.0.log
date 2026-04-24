@@ -1,0 +1,122 @@
+21-04-2026 00:03:05.942 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:08:07.053 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:08:10.177 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - Re-registering apps/SHIPPING-SERVICE
+21-04-2026 00:08:10.194 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+21-04-2026 00:08:10.365 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+21-04-2026 00:08:37.823 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+21-04-2026 00:08:38.072 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+21-04-2026 00:08:38.081 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+21-04-2026 00:08:38.081 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+21-04-2026 00:08:38.081 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+21-04-2026 00:08:38.081 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: false
+21-04-2026 00:08:38.081 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+21-04-2026 00:08:39.471 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+21-04-2026 00:10:10.476 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - Re-registering apps/SHIPPING-SERVICE
+21-04-2026 00:10:10.479 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+21-04-2026 00:10:10.490 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+21-04-2026 00:10:39.599 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+21-04-2026 00:10:39.601 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+21-04-2026 00:10:39.602 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+21-04-2026 00:10:39.602 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+21-04-2026 00:10:39.603 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+21-04-2026 00:10:39.603 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: false
+21-04-2026 00:10:39.603 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+21-04-2026 00:10:39.636 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+21-04-2026 00:13:07.181 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:13:13.125 [SpringApplicationShutdownHook] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application SHIPPING-SERVICE with eureka with status DOWN
+21-04-2026 00:13:13.134 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776710593134, current=DOWN, previous=UP]
+21-04-2026 00:13:13.146 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+21-04-2026 00:13:13.254 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+21-04-2026 00:13:13.640 [SpringApplicationShutdownHook] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+21-04-2026 00:13:13.723 [SpringApplicationShutdownHook] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+21-04-2026 00:13:13.813 [SpringApplicationShutdownHook] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+21-04-2026 00:13:14.132 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+21-04-2026 00:13:17.145 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+21-04-2026 00:13:17.195 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - deregister  status: 200
+21-04-2026 00:13:17.198 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+21-04-2026 00:13:24.332 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarting - Starting ShippingServiceApplication using Java 22.0.2 with PID 23860 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\shipping-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+21-04-2026 00:13:24.335 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+21-04-2026 00:13:24.439 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+21-04-2026 00:13:24.440 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=shipping-service, profiles=[default], label=null, version=606e7fa5d7e1f403a92f0a523fe0d4206b467318, state=null
+21-04-2026 00:13:26.508 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21-04-2026 00:13:26.717 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 195 ms. Found 1 JPA repository interface.
+21-04-2026 00:13:27.531 [main] [-] INFO  shipping-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=17f2bc7b-9efc-39b3-90b2-752371a1bebe
+21-04-2026 00:13:28.080 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+21-04-2026 00:13:28.087 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+21-04-2026 00:13:28.795 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9030 (http)
+21-04-2026 00:13:28.815 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9030"]
+21-04-2026 00:13:28.823 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+21-04-2026 00:13:28.824 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+21-04-2026 00:13:28.972 [main] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring embedded WebApplicationContext
+21-04-2026 00:13:28.973 [main] [-] INFO  shipping-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4527 ms
+21-04-2026 00:13:30.708 [main] [-] INFO  shipping-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+21-04-2026 00:13:30.884 [main] [-] INFO  shipping-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+21-04-2026 00:13:30.976 [main] [-] INFO  shipping-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+21-04-2026 00:13:31.742 [main] [-] INFO  shipping-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+21-04-2026 00:13:31.799 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+21-04-2026 00:13:32.027 [main] [-] INFO  shipping-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5da41d02
+21-04-2026 00:13:32.029 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+21-04-2026 00:13:32.136 [main] [-] WARN  shipping-service-org.hibernate.orm.deprecation.constructDialect - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21-04-2026 00:13:33.894 [main] [-] INFO  shipping-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21-04-2026 00:13:34.282 [main] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21-04-2026 00:13:35.399 [main] [-] WARN  shipping-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21-04-2026 00:13:37.614 [main] [-] INFO  shipping-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+21-04-2026 00:13:37.710 [main] [-] WARN  shipping-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+21-04-2026 00:13:37.805 [main] [-] INFO  shipping-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 25 endpoints beneath base path '/actuator'
+21-04-2026 00:13:37.979 [main] [-] INFO  shipping-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+21-04-2026 00:13:38.021 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+21-04-2026 00:13:38.027 [main] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:13:38.036 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+21-04-2026 00:13:38.037 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+21-04-2026 00:13:38.037 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+21-04-2026 00:13:38.037 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+21-04-2026 00:13:38.037 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+21-04-2026 00:13:38.037 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+21-04-2026 00:13:38.038 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+21-04-2026 00:13:38.268 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+21-04-2026 00:13:38.275 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+21-04-2026 00:13:38.285 [main] [-] INFO  shipping-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+21-04-2026 00:13:38.287 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776710618287 with initial instances count: 4
+21-04-2026 00:13:38.314 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application SHIPPING-SERVICE with eureka with status UP
+21-04-2026 00:13:38.315 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776710618315, current=UP, previous=STARTING]
+21-04-2026 00:13:38.317 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+21-04-2026 00:13:38.318 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9030"]
+21-04-2026 00:13:38.354 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9030 (http) with context path '/shipping'
+21-04-2026 00:13:38.355 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9030
+21-04-2026 00:13:38.383 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+21-04-2026 00:13:38.395 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarted - Started ShippingServiceApplication in 18.25 seconds (process running for 19.249)
+21-04-2026 00:18:38.075 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:19:52.770 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21-04-2026 00:19:52.784 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+21-04-2026 00:19:53.143 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 355 ms
+21-04-2026 00:19:54.508 [http-nio-9030-exec-1] [69e6754732ddc8e16e3474b448c7897a-5beb93b96412ac23] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 1
+21-04-2026 00:19:54.513 [http-nio-9030-exec-1] [69e6754732ddc8e16e3474b448c7897a-5beb93b96412ac23] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 1
+21-04-2026 00:23:38.281 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:25:11.187 [http-nio-9030-exec-2] [69e6768d99c2d7e6805af61c86d15c61-a6970594599e615a] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 2
+21-04-2026 00:25:11.210 [http-nio-9030-exec-2] [69e6768d99c2d7e6805af61c86d15c61-a6970594599e615a] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 2
+21-04-2026 00:28:05.734 [http-nio-9030-exec-3] [69e6773d11fccfaf069060706d7c7486-342ee3dfa2f7ee67] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 3
+21-04-2026 00:28:05.735 [http-nio-9030-exec-3] [69e6773d11fccfaf069060706d7c7486-342ee3dfa2f7ee67] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 3
+21-04-2026 00:28:38.322 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:33:38.383 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:38:38.682 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:38:43.702 [http-nio-9030-exec-4] [69e679b65cde994da95bd40b35a176c9-7b864785b0a497c3] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 4
+21-04-2026 00:38:43.736 [http-nio-9030-exec-4] [69e679b65cde994da95bd40b35a176c9-7b864785b0a497c3] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 4
+21-04-2026 00:40:54.633 [http-nio-9030-exec-5] [69e67a39e22d8e1d87faf855920ee62f-ffcf762fd72709c2] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 5
+21-04-2026 00:40:54.917 [http-nio-9030-exec-5] [69e67a39e22d8e1d87faf855920ee62f-ffcf762fd72709c2] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 5
+21-04-2026 00:43:11.789 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - Re-registering apps/SHIPPING-SERVICE
+21-04-2026 00:43:11.829 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+21-04-2026 00:43:11.976 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+21-04-2026 00:43:38.932 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:43:43.142 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+21-04-2026 00:43:43.177 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+21-04-2026 00:43:43.177 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+21-04-2026 00:43:43.179 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+21-04-2026 00:43:43.179 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+21-04-2026 00:43:43.179 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: false
+21-04-2026 00:43:43.179 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+21-04-2026 00:43:43.198 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+21-04-2026 00:45:06.368 [http-nio-9030-exec-6] [69e67b36335246a786f926683ba15ddf-7a2494e1ef7a4e57] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 6
+21-04-2026 00:45:06.381 [http-nio-9030-exec-6] [69e67b36335246a786f926683ba15ddf-7a2494e1ef7a4e57] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 6
+21-04-2026 00:48:38.950 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 00:53:39.306 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+21-04-2026 04:57:41.019 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h7s724ms839µs900ns).

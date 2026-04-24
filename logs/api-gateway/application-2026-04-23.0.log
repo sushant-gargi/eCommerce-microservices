@@ -1,0 +1,1 @@
+23-04-2026 19:04:15.284 [AsyncResolver-bootstrap-executor-%d] [-] INFO  api-gateway-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

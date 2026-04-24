@@ -1,0 +1,14 @@
+25-04-2026 00:04:35.015 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:09:36.053 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:14:36.146 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:15:08.062 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-04-2026 00:15:08.173 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+25-04-2026 00:15:08.404 [http-nio-9030-exec-1] [-] INFO  shipping-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 228 ms
+25-04-2026 00:15:09.130 [http-nio-9030-exec-1] [69ebba2f9de5c8cd6785dffc352ea0b2-593fac8dc660a401] INFO  shipping-service-c.c.e.s.c.ShippingController.getAllShipments - Fetching all shipments
+25-04-2026 00:15:09.138 [http-nio-9030-exec-1] [69ebba2f9de5c8cd6785dffc352ea0b2-593fac8dc660a401] INFO  shipping-service-c.c.e.s.service.ShippingService.getAllShipments - Fetching all shipping records
+25-04-2026 00:15:44.506 [http-nio-9030-exec-4] [69ebba589cb54a63b8959a829b84714d-db1deea7d11e635b] INFO  shipping-service-c.c.e.s.c.ShippingController.getAllShipments - Fetching all shipments
+25-04-2026 00:15:44.507 [http-nio-9030-exec-4] [69ebba589cb54a63b8959a829b84714d-db1deea7d11e635b] INFO  shipping-service-c.c.e.s.service.ShippingService.getAllShipments - Fetching all shipping records
+25-04-2026 00:18:14.916 [http-nio-9030-exec-5] [69ebbae861cf4a6a324f48889eee7552-531b3086dac79294] INFO  shipping-service-c.c.e.s.c.ShippingController.shipOrder - Received shipping request for order ID: 1
+25-04-2026 00:18:14.918 [http-nio-9030-exec-5] [69ebbae861cf4a6a324f48889eee7552-531b3086dac79294] INFO  shipping-service-c.c.e.s.service.ShippingService.shipOrder - Shipping order with ID: 1
+25-04-2026 00:19:36.215 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:24:36.238 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

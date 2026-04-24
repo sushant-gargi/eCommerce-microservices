@@ -1,0 +1,698 @@
+20-04-2026 01:30:44.874 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarting - Starting ShippingServiceApplication using Java 22.0.2 with PID 45484 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\shipping-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 01:30:44.876 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 01:30:44.946 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 01:30:44.946 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=shipping-service, profiles=[default], label=null, version=70fb7de9b6e79ab2fc3ccf703d734b83ba25dc83, state=null
+20-04-2026 01:30:47.242 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 01:30:47.503 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 234 ms. Found 1 JPA repository interface.
+20-04-2026 01:30:48.342 [main] [-] INFO  shipping-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=17f2bc7b-9efc-39b3-90b2-752371a1bebe
+20-04-2026 01:30:49.271 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 01:30:49.278 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 01:30:50.299 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9030 (http)
+20-04-2026 01:30:50.320 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9030"]
+20-04-2026 01:30:50.330 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 01:30:50.330 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 01:30:50.558 [main] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 01:30:50.560 [main] [-] INFO  shipping-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5611 ms
+20-04-2026 01:30:52.368 [main] [-] INFO  shipping-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 01:30:52.509 [main] [-] INFO  shipping-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 01:30:52.594 [main] [-] INFO  shipping-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 01:30:53.485 [main] [-] INFO  shipping-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 01:30:53.529 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 01:30:54.694 [main] [-] WARN  shipping-service-o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 0, SQLState: 08001
+20-04-2026 01:30:54.694 [main] [-] ERROR shipping-service-o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+20-04-2026 01:30:54.696 [main] [-] WARN  shipping-service-o.h.e.j.e.i.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.codingshuttle.ecommerce.shipping_service.ShippingServiceApplication.main(ShippingServiceApplication.java:13)
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 49 common frames omitted
+20-04-2026 01:30:54.721 [main] [-] WARN  shipping-service-org.hibernate.orm.deprecation.constructDialect - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+20-04-2026 01:30:55.876 [main] [-] INFO  shipping-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 01:30:55.919 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 01:30:56.943 [main] [-] WARN  shipping-service-o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - SQL Error: 0, SQLState: 08001
+20-04-2026 01:30:56.943 [main] [-] ERROR shipping-service-o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+20-04-2026 01:30:56.948 [main] [-] ERROR shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+20-04-2026 01:30:56.948 [main] [-] WARN  shipping-service-o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+20-04-2026 01:30:57.957 [main] [-] WARN  shipping-service-z.r.i.AsyncReporter$BoundedAsyncReporter.close - Timed out waiting for in-flight spans to send
+20-04-2026 01:30:57.962 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+20-04-2026 01:30:57.986 [main] [-] INFO  shipping-service-o.s.b.a.l.ConditionEvaluationReportLogger.logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+20-04-2026 01:30:58.018 [main] [-] ERROR shipping-service-o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.codingshuttle.ecommerce.shipping_service.ShippingServiceApplication.main(ShippingServiceApplication.java:13)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:100)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 53 common frames omitted
+20-04-2026 01:45:32.686 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarting - Starting ShippingServiceApplication using Java 22.0.2 with PID 42756 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\shipping-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 01:45:32.820 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 01:45:32.906 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 01:45:32.906 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=shipping-service, profiles=[default], label=null, version=c3f4f4a2b9208bbefe969845cd1d7fd21db3b564, state=null
+20-04-2026 01:45:35.923 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 01:45:36.358 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 417 ms. Found 1 JPA repository interface.
+20-04-2026 01:45:37.371 [main] [-] INFO  shipping-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=17f2bc7b-9efc-39b3-90b2-752371a1bebe
+20-04-2026 01:45:38.193 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 01:45:38.200 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 01:45:38.972 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9030 (http)
+20-04-2026 01:45:38.991 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9030"]
+20-04-2026 01:45:38.997 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 01:45:38.997 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 01:45:39.130 [main] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 01:45:39.130 [main] [-] INFO  shipping-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 6216 ms
+20-04-2026 01:45:40.552 [main] [-] INFO  shipping-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 01:45:40.674 [main] [-] INFO  shipping-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 01:45:40.740 [main] [-] INFO  shipping-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 01:45:41.226 [main] [-] INFO  shipping-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 01:45:41.256 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 01:45:41.624 [main] [-] INFO  shipping-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32d3b965
+20-04-2026 01:45:41.626 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 01:45:41.713 [main] [-] WARN  shipping-service-org.hibernate.orm.deprecation.constructDialect - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+20-04-2026 01:45:42.906 [main] [-] INFO  shipping-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 01:45:43.089 [main] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 01:45:44.105 [main] [-] WARN  shipping-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 01:45:46.502 [main] [-] INFO  shipping-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 01:45:46.601 [main] [-] WARN  shipping-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 01:45:46.675 [main] [-] INFO  shipping-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 25 endpoints beneath base path '/actuator'
+20-04-2026 01:45:46.849 [main] [-] INFO  shipping-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 01:45:46.895 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 01:45:46.902 [main] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 01:45:46.918 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 01:45:46.920 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 01:45:47.151 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 01:45:47.156 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 01:45:47.160 [main] [-] INFO  shipping-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 01:45:47.163 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776629747162 with initial instances count: 4
+20-04-2026 01:45:47.178 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application SHIPPING-SERVICE with eureka with status UP
+20-04-2026 01:45:47.180 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776629747180, current=UP, previous=STARTING]
+20-04-2026 01:45:47.183 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+20-04-2026 01:45:47.183 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9030"]
+20-04-2026 01:45:47.216 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9030 (http) with context path '/shipping'
+20-04-2026 01:45:47.218 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9030
+20-04-2026 01:45:47.251 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarted - Started ShippingServiceApplication in 19.998 seconds (process running for 22.462)
+20-04-2026 01:45:47.263 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+20-04-2026 01:45:48.211 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  shipping-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+20-04-2026 01:45:48.212 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  shipping-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 9 common frames omitted
+20-04-2026 01:50:46.969 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:55:47.129 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 02:00:47.649 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 02:05:48.080 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 06:07:56.381 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h12s434ms611µs200ns).
+20-04-2026 16:38:38.260 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h30m48s371ms807µs).
+20-04-2026 16:40:37.622 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:45:40.138 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:50:40.956 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:55:41.718 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:00:42.020 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:07:46.938 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:08:11.374 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s828ms710µs100ns).
+20-04-2026 17:12:51.540 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:17:51.902 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:22:52.319 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:27:52.375 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:32:52.392 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:37:52.409 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:42:52.433 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:47:52.486 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:52:52.501 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:57:52.512 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:02:52.528 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:07:52.536 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:12:52.558 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:17:52.618 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:22:52.734 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:27:52.797 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:32:52.808 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:00:32.483 [HikariPool-1 housekeeper] [-] WARN  shipping-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h27m19s599ms906µs).
+20-04-2026 22:04:42.425 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:09:42.527 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:14:42.545 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:19:42.619 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:24:42.849 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:29:03.684 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 19 more
+
+20-04-2026 22:29:03.607 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+20-04-2026 22:29:03.810 [DiscoveryClient-CacheRefreshExecutor-%d] [-] WARN  shipping-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:29:03.810 [DiscoveryClient-HeartbeatExecutor-%d] [-] WARN  shipping-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:29:04.966 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+20-04-2026 22:29:05.002 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 23 more
+
+20-04-2026 22:29:05.073 [DiscoveryClient-CacheRefreshExecutor-%d] [-] WARN  shipping-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:29:05.073 [DiscoveryClient-HeartbeatExecutor-%d] [-] WARN  shipping-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:29:05.077 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+20-04-2026 22:29:05.077 [DiscoveryClient-HeartbeatExecutor-%d] [-] ERROR shipping-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+20-04-2026 22:29:35.726 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - Re-registering apps/SHIPPING-SERVICE
+20-04-2026 22:29:35.728 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+20-04-2026 22:29:35.817 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+20-04-2026 22:29:43.014 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:34:43.838 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:39:46.438 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:44:46.624 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:49:47.702 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:54:47.903 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:57:36.314 [SpringApplicationShutdownHook] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application SHIPPING-SERVICE with eureka with status DOWN
+20-04-2026 22:57:36.325 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776706056325, current=DOWN, previous=UP]
+20-04-2026 22:57:36.336 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+20-04-2026 22:57:36.476 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+20-04-2026 22:57:36.954 [SpringApplicationShutdownHook] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:57:37.074 [SpringApplicationShutdownHook] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-04-2026 22:57:37.185 [SpringApplicationShutdownHook] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-04-2026 22:57:37.743 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+20-04-2026 22:57:40.761 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+20-04-2026 22:57:40.835 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - deregister  status: 200
+20-04-2026 22:57:40.839 [SpringApplicationShutdownHook] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+20-04-2026 22:57:47.571 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarting - Starting ShippingServiceApplication using Java 22.0.2 with PID 20428 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\shipping-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 22:57:47.574 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 22:57:47.651 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 22:57:47.676 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=shipping-service, profiles=[default], label=null, version=e830bccc3b384cd8bea9217b4dc591a19258a758, state=null
+20-04-2026 22:57:49.439 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 22:57:49.629 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 181 ms. Found 1 JPA repository interface.
+20-04-2026 22:57:50.198 [main] [-] INFO  shipping-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=17f2bc7b-9efc-39b3-90b2-752371a1bebe
+20-04-2026 22:57:50.984 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 22:57:50.993 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 22:57:51.780 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9030 (http)
+20-04-2026 22:57:51.806 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9030"]
+20-04-2026 22:57:51.813 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 22:57:51.813 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 22:57:51.955 [main] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 22:57:51.956 [main] [-] INFO  shipping-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4278 ms
+20-04-2026 22:57:53.541 [main] [-] INFO  shipping-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 22:57:53.654 [main] [-] INFO  shipping-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 22:57:53.709 [main] [-] INFO  shipping-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 22:57:54.187 [main] [-] INFO  shipping-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 22:57:54.222 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 22:57:54.435 [main] [-] INFO  shipping-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6768dc74
+20-04-2026 22:57:54.437 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 22:57:54.502 [main] [-] WARN  shipping-service-org.hibernate.orm.deprecation.constructDialect - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+20-04-2026 22:57:55.531 [main] [-] INFO  shipping-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 22:57:55.637 [main] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:57:56.265 [main] [-] WARN  shipping-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 22:57:58.514 [main] [-] INFO  shipping-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 22:57:58.687 [main] [-] WARN  shipping-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 22:57:58.775 [main] [-] INFO  shipping-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 25 endpoints beneath base path '/actuator'
+20-04-2026 22:57:58.941 [main] [-] INFO  shipping-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 22:57:58.982 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 22:57:58.993 [main] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:57:59.021 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 22:57:59.022 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 22:57:59.023 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 22:57:59.023 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 22:57:59.023 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 22:57:59.023 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 22:57:59.023 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 22:57:59.384 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 22:57:59.388 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 22:57:59.390 [main] [-] INFO  shipping-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 22:57:59.394 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776706079393 with initial instances count: 5
+20-04-2026 22:57:59.410 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application SHIPPING-SERVICE with eureka with status UP
+20-04-2026 22:57:59.410 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776706079410, current=UP, previous=STARTING]
+20-04-2026 22:57:59.412 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+20-04-2026 22:57:59.412 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9030"]
+20-04-2026 22:57:59.455 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9030 (http) with context path '/shipping'
+20-04-2026 22:57:59.456 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9030
+20-04-2026 22:57:59.491 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+20-04-2026 22:57:59.505 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarted - Started ShippingServiceApplication in 14.845 seconds (process running for 15.8)
+20-04-2026 23:02:59.102 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:07:59.313 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:12:59.318 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:17:59.324 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:22:59.344 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:28:04.076 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:33:05.242 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:38:05.257 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:43:05.446 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:48:05.631 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:53:05.704 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:58:05.728 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

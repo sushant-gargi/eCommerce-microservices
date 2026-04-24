@@ -1,0 +1,9 @@
+25-04-2026 00:03:57.964 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:08:58.998 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:13:59.049 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:18:10.721 [http-nio-9021-exec-7] [69ebbae861cf4a6a324f48889eee7552-bf4626e9235509fd] INFO  order-service-c.c.e.o.service.OrdersService.createOrder - Calling the createOrder method
+25-04-2026 00:18:15.311 [http-nio-9021-exec-7] [69ebbae861cf4a6a324f48889eee7552-bf4626e9235509fd] INFO  order-service-c.c.e.o.service.OrdersService.createOrder - Shipping response: Order shipped successfully for order id: 1
+25-04-2026 00:18:59.109 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+25-04-2026 00:20:15.696 [http-nio-9021-exec-5] [69ebbb67f8cde32787cd6f2a54afc5b3-462fe3dcc3e3b704] INFO  order-service-c.c.e.o.controller.OrdersController.cancelOrder - Cancelling order with ID: 1 via controller
+25-04-2026 00:20:15.700 [http-nio-9021-exec-5] [69ebbb67f8cde32787cd6f2a54afc5b3-462fe3dcc3e3b704] INFO  order-service-c.c.e.o.service.OrdersService.cancelOrder - Cancelling order with ID: 1
+25-04-2026 00:23:59.131 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

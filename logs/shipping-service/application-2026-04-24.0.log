@@ -1,0 +1,53 @@
+24-04-2026 23:49:13.065 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarting - Starting ShippingServiceApplication using Java 22.0.2 with PID 18240 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\shipping-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+24-04-2026 23:49:13.066 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+24-04-2026 23:49:13.258 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+24-04-2026 23:49:13.258 [main] [-] INFO  shipping-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=shipping-service, profiles=[default], label=null, version=02911afb28134f36d432d9ba28cf2c8e1ce6e912, state=null
+24-04-2026 23:49:22.755 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-04-2026 23:49:23.146 [main] [-] INFO  shipping-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 378 ms. Found 1 JPA repository interface.
+24-04-2026 23:49:24.065 [main] [-] INFO  shipping-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=17f2bc7b-9efc-39b3-90b2-752371a1bebe
+24-04-2026 23:49:25.098 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+24-04-2026 23:49:25.105 [main] [-] WARN  shipping-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+24-04-2026 23:49:26.667 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9030 (http)
+24-04-2026 23:49:26.685 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9030"]
+24-04-2026 23:49:26.692 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+24-04-2026 23:49:26.693 [main] [-] INFO  shipping-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+24-04-2026 23:49:26.826 [main] [-] INFO  shipping-service-o.a.c.c.C.[.[localhost].[/shipping].log - Initializing Spring embedded WebApplicationContext
+24-04-2026 23:49:26.827 [main] [-] INFO  shipping-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 13523 ms
+24-04-2026 23:49:28.112 [main] [-] INFO  shipping-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-04-2026 23:49:28.234 [main] [-] INFO  shipping-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+24-04-2026 23:49:28.301 [main] [-] INFO  shipping-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+24-04-2026 23:49:28.753 [main] [-] INFO  shipping-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-04-2026 23:49:28.778 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+24-04-2026 23:49:28.950 [main] [-] INFO  shipping-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31dbca5d
+24-04-2026 23:49:28.952 [main] [-] INFO  shipping-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+24-04-2026 23:49:29.002 [main] [-] WARN  shipping-service-org.hibernate.orm.deprecation.constructDialect - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+24-04-2026 23:49:30.009 [main] [-] INFO  shipping-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-04-2026 23:49:30.138 [main] [-] INFO  shipping-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-04-2026 23:49:31.428 [main] [-] WARN  shipping-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-04-2026 23:49:34.268 [main] [-] INFO  shipping-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+24-04-2026 23:49:34.421 [main] [-] WARN  shipping-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+24-04-2026 23:49:34.513 [main] [-] INFO  shipping-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 25 endpoints beneath base path '/actuator'
+24-04-2026 23:49:34.646 [main] [-] INFO  shipping-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+24-04-2026 23:49:34.679 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+24-04-2026 23:49:34.683 [main] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+24-04-2026 23:49:34.691 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+24-04-2026 23:49:34.691 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+24-04-2026 23:49:34.691 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+24-04-2026 23:49:34.692 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+24-04-2026 23:49:34.692 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+24-04-2026 23:49:34.692 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+24-04-2026 23:49:34.692 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+24-04-2026 23:49:34.909 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+24-04-2026 23:49:34.983 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+24-04-2026 23:49:34.985 [main] [-] INFO  shipping-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+24-04-2026 23:49:34.986 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777054774986 with initial instances count: 3
+24-04-2026 23:49:34.996 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application SHIPPING-SERVICE with eureka with status UP
+24-04-2026 23:49:34.997 [main] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777054774997, current=UP, previous=STARTING]
+24-04-2026 23:49:34.998 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030: registering service...
+24-04-2026 23:49:34.998 [main] [-] INFO  shipping-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9030"]
+24-04-2026 23:49:35.046 [main] [-] INFO  shipping-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9030 (http) with context path '/shipping'
+24-04-2026 23:49:35.048 [main] [-] INFO  shipping-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9030
+24-04-2026 23:49:35.095 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  shipping-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_SHIPPING-SERVICE/DESKTOP-VMQANPU.mshome.net:shipping-service:9030 - registration status: 204
+24-04-2026 23:49:35.111 [main] [-] INFO  shipping-service-c.c.e.s.ShippingServiceApplication.logStarted - Started ShippingServiceApplication in 25.65 seconds (process running for 26.761)
+24-04-2026 23:54:34.709 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+24-04-2026 23:59:34.852 [AsyncResolver-bootstrap-executor-%d] [-] INFO  shipping-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration

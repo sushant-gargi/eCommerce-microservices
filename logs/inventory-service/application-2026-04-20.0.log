@@ -1,0 +1,865 @@
+20-04-2026 01:30:06.658 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 22.0.2 with PID 36436 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\inventory-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 01:30:06.663 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 01:30:06.767 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 01:30:06.768 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=inventory-service, profiles=[default], label=null, version=70fb7de9b6e79ab2fc3ccf703d734b83ba25dc83, state=null
+20-04-2026 01:30:08.824 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 01:30:08.994 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interface.
+20-04-2026 01:30:09.538 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a277a5a6-1046-3084-9ddf-e4e1abde76e3
+20-04-2026 01:30:10.346 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 01:30:10.353 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 01:30:11.268 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+20-04-2026 01:30:11.304 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+20-04-2026 01:30:11.316 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 01:30:11.316 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 01:30:11.595 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 01:30:11.596 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4724 ms
+20-04-2026 01:30:13.537 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 01:30:13.718 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 01:30:13.840 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 01:30:14.796 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 01:30:14.875 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 01:30:15.570 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d24703e
+20-04-2026 01:30:15.571 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 01:30:17.584 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 01:30:17.810 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 01:30:19.194 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 01:30:19.462 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+20-04-2026 01:30:21.419 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 01:30:21.504 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 01:30:21.528 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 17 endpoints beneath base path '/actuator'
+20-04-2026 01:30:21.625 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 01:30:21.678 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 01:30:21.683 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:30:21.693 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 01:30:21.694 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 01:30:21.694 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 01:30:21.694 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 01:30:21.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 01:30:21.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 01:30:21.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 01:30:21.942 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 01:30:21.947 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 01:30:21.950 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 01:30:21.959 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776628821959 with initial instances count: 1
+20-04-2026 01:30:21.971 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+20-04-2026 01:30:21.972 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776628821972, current=UP, previous=STARTING]
+20-04-2026 01:30:21.975 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+20-04-2026 01:30:21.975 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 01:30:22.017 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/inventory'
+20-04-2026 01:30:22.019 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+20-04-2026 01:30:22.077 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 01:30:22.095 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 23.252 seconds (process running for 24.441)
+20-04-2026 01:32:23.366 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+20-04-2026 01:32:23.384 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 9 common frames omitted
+20-04-2026 01:35:03.446 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application INVENTORY-SERVICE with eureka with status DOWN
+20-04-2026 01:35:03.575 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776629103574, current=DOWN, previous=UP]
+20-04-2026 01:35:03.585 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 01:35:03.659 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 01:35:03.925 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 01:35:04.117 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-04-2026 01:35:04.177 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-04-2026 01:35:04.608 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+20-04-2026 01:35:07.617 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+20-04-2026 01:35:07.814 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - deregister  status: 200
+20-04-2026 01:35:07.816 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+20-04-2026 01:35:20.533 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 22.0.2 with PID 46896 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\inventory-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 01:35:20.540 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 01:35:20.596 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 01:35:20.596 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=inventory-service, profiles=[default], label=null, version=d375bf4e002aed15593c4acd83cb70a0368d664e, state=null
+20-04-2026 01:35:22.423 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 01:35:22.662 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 220 ms. Found 1 JPA repository interface.
+20-04-2026 01:35:23.251 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a277a5a6-1046-3084-9ddf-e4e1abde76e3
+20-04-2026 01:35:24.013 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 01:35:24.018 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 01:35:24.459 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+20-04-2026 01:35:24.475 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+20-04-2026 01:35:24.480 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 01:35:24.481 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 01:35:24.586 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 01:35:24.587 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3988 ms
+20-04-2026 01:35:25.560 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 01:35:25.655 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 01:35:25.726 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 01:35:26.155 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 01:35:26.206 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 01:35:26.438 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65880400
+20-04-2026 01:35:26.441 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 01:35:27.503 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 01:35:27.527 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+20-04-2026 01:35:27.527 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "products" does not exist, skipping
+20-04-2026 01:35:27.584 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 01:35:28.567 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 01:35:28.780 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+20-04-2026 01:35:31.421 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 01:35:31.509 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 01:35:31.565 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 17 endpoints beneath base path '/actuator'
+20-04-2026 01:35:31.787 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 01:35:31.904 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 01:35:31.923 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:35:31.940 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 01:35:31.940 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 01:35:31.941 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 01:35:31.941 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 01:35:31.941 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 01:35:31.941 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 01:35:31.941 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 01:35:32.585 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 01:35:32.588 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 01:35:32.594 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 01:35:32.599 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776629132598 with initial instances count: 1
+20-04-2026 01:35:32.616 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+20-04-2026 01:35:32.618 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776629132618, current=UP, previous=STARTING]
+20-04-2026 01:35:32.623 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+20-04-2026 01:35:32.623 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 01:35:32.685 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/inventory'
+20-04-2026 01:35:32.687 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+20-04-2026 01:35:32.742 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 01:35:32.756 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 18.118 seconds (process running for 20.244)
+20-04-2026 01:36:34.106 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+20-04-2026 01:36:34.111 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 9 common frames omitted
+20-04-2026 01:40:31.976 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:45:32.074 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:50:32.177 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 01:55:32.359 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 02:00:32.560 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 02:05:32.801 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 06:07:41.347 [HikariPool-1 housekeeper] [-] WARN  inventory-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h16s534ms285µs100ns).
+20-04-2026 16:38:24.469 [HikariPool-1 housekeeper] [-] WARN  inventory-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h30m44s952ms820µs800ns).
+20-04-2026 16:39:23.722 [HikariPool-1 housekeeper] [-] WARN  inventory-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s863ms607µs800ns).
+20-04-2026 16:40:22.146 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:45:23.874 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:50:31.745 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 16:55:32.472 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:00:33.050 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:05:33.342 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:08:02.062 [HikariPool-1 housekeeper] [-] WARN  inventory-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s833ms182µs700ns).
+20-04-2026 17:12:35.843 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:17:36.428 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:22:36.901 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:27:36.968 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:32:36.977 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:37:36.982 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:42:36.993 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:47:37.039 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:52:37.054 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 17:57:37.059 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:02:37.091 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:07:37.101 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:12:37.121 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:17:37.184 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:22:37.193 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:27:37.211 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 18:32:37.245 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:00:23.114 [HikariPool-1 housekeeper] [-] WARN  inventory-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h27m19s604ms220µs900ns).
+20-04-2026 22:04:26.865 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:09:27.020 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:14:27.034 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:19:27.209 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:24:27.663 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:26:59.815 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application INVENTORY-SERVICE with eureka with status DOWN
+20-04-2026 22:26:59.981 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704219979, current=DOWN, previous=UP]
+20-04-2026 22:26:59.995 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:27:00.478 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:27:00.887 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:27:01.273 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-04-2026 22:27:01.429 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-04-2026 22:27:01.643 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+20-04-2026 22:27:04.667 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+20-04-2026 22:27:04.826 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - deregister  status: 200
+20-04-2026 22:27:04.831 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+20-04-2026 22:27:29.698 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 22.0.2 with PID 14300 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\inventory-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 22:27:29.701 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 22:27:29.782 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 22:27:29.782 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=inventory-service, profiles=[default], label=null, version=e830bccc3b384cd8bea9217b4dc591a19258a758, state=null
+20-04-2026 22:27:31.461 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 22:27:31.788 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 304 ms. Found 1 JPA repository interface.
+20-04-2026 22:27:32.307 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a277a5a6-1046-3084-9ddf-e4e1abde76e3
+20-04-2026 22:27:33.125 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 22:27:33.133 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 22:27:34.292 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+20-04-2026 22:27:34.335 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:27:34.345 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 22:27:34.346 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 22:27:34.567 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 22:27:34.571 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4785 ms
+20-04-2026 22:27:37.100 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 22:27:37.317 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 22:27:37.469 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 22:27:38.260 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 22:27:38.312 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 22:27:38.781 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5039c2cf
+20-04-2026 22:27:38.784 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 22:27:40.986 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 22:27:41.070 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+20-04-2026 22:27:41.071 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "products" does not exist, skipping
+20-04-2026 22:27:41.172 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:27:42.851 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 22:27:43.182 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+20-04-2026 22:27:46.123 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 22:27:46.314 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 22:27:46.363 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 17 endpoints beneath base path '/actuator'
+20-04-2026 22:27:46.584 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 22:27:46.665 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 22:27:46.674 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:27:46.694 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 22:27:46.694 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 22:27:46.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 22:27:46.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 22:27:46.695 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 22:27:46.696 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 22:27:46.696 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 22:27:47.145 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 22:27:47.154 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 22:27:47.159 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 22:27:47.161 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776704267161 with initial instances count: 4
+20-04-2026 22:27:47.169 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+20-04-2026 22:27:47.171 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704267171, current=UP, previous=STARTING]
+20-04-2026 22:27:47.173 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:27:47.174 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:27:47.232 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/inventory'
+20-04-2026 22:27:47.233 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+20-04-2026 22:27:47.242 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:27:47.275 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 23.166 seconds (process running for 31.664)
+20-04-2026 22:28:18.324 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+20-04-2026 22:28:18.325 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 9 common frames omitted
+20-04-2026 22:28:47.365 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  inventory-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 19 more
+
+20-04-2026 22:28:47.365 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+20-04-2026 22:28:47.383 [DiscoveryClient-HeartbeatExecutor-%d] [-] WARN  inventory-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:28:47.426 [DiscoveryClient-CacheRefreshExecutor-%d] [-] WARN  inventory-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:28:47.546 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  inventory-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+20-04-2026 22:28:47.548 [DiscoveryClient-HeartbeatExecutor-%d] [-] WARN  inventory-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:28:47.548 [DiscoveryClient-HeartbeatExecutor-%d] [-] ERROR inventory-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+20-04-2026 22:28:47.557 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.n.d.s.t.d.RedirectingEurekaHttpClient.execute - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 23 more
+
+20-04-2026 22:28:47.563 [DiscoveryClient-CacheRefreshExecutor-%d] [-] WARN  inventory-service-c.n.d.s.t.d.RetryableEurekaHttpClient.execute - Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+20-04-2026 22:28:47.565 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+20-04-2026 22:29:17.928 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.renew - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - Re-registering apps/INVENTORY-SERVICE
+20-04-2026 22:29:17.929 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:29:18.105 [DiscoveryClient-HeartbeatExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:29:47.660 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 22:29:47.662 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 22:29:47.662 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 22:29:47.662 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 22:29:47.663 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 22:29:47.664 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: false
+20-04-2026 22:29:47.666 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 22:29:47.692 [DiscoveryClient-CacheRefreshExecutor-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 22:30:30.917 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application INVENTORY-SERVICE with eureka with status DOWN
+20-04-2026 22:30:30.922 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704430922, current=DOWN, previous=UP]
+20-04-2026 22:30:30.928 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:30:30.959 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:30:31.843 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:30:32.253 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-04-2026 22:30:32.393 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-04-2026 22:30:32.715 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+20-04-2026 22:30:35.783 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+20-04-2026 22:30:35.909 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - deregister  status: 200
+20-04-2026 22:30:35.913 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+20-04-2026 22:31:01.012 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 22.0.2 with PID 21000 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\inventory-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 22:31:01.120 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 22:31:01.221 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 22:31:01.221 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=inventory-service, profiles=[default], label=null, version=e830bccc3b384cd8bea9217b4dc591a19258a758, state=null
+20-04-2026 22:31:04.068 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 22:31:04.409 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 324 ms. Found 1 JPA repository interface.
+20-04-2026 22:31:05.086 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a277a5a6-1046-3084-9ddf-e4e1abde76e3
+20-04-2026 22:31:06.104 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 22:31:06.111 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 22:31:06.997 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+20-04-2026 22:31:07.023 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:31:07.031 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 22:31:07.032 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 22:31:07.328 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 22:31:07.329 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 6097 ms
+20-04-2026 22:31:08.962 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 22:31:09.232 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 22:31:09.336 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 22:31:10.131 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 22:31:10.331 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 22:31:10.775 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f27f354
+20-04-2026 22:31:10.777 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 22:31:12.732 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 22:31:12.786 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+20-04-2026 22:31:12.786 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "products" does not exist, skipping
+20-04-2026 22:31:12.904 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:31:14.123 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 22:31:14.330 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+20-04-2026 22:31:16.328 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 22:31:16.444 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 22:31:16.494 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 17 endpoints beneath base path '/actuator'
+20-04-2026 22:31:16.689 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 22:31:16.751 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 22:31:16.757 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:31:16.767 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 22:31:16.768 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 22:31:16.768 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 22:31:16.768 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 22:31:16.768 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 22:31:16.768 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 22:31:16.769 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 22:31:17.102 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 22:31:17.107 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 22:31:17.110 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 22:31:17.112 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776704477111 with initial instances count: 4
+20-04-2026 22:31:17.119 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+20-04-2026 22:31:17.120 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704477120, current=UP, previous=STARTING]
+20-04-2026 22:31:17.124 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:31:17.124 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:31:17.172 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:31:17.187 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/inventory'
+20-04-2026 22:31:17.188 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+20-04-2026 22:31:17.228 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 30.802 seconds (process running for 32.756)
+20-04-2026 22:31:18.140 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+20-04-2026 22:31:18.140 [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] [-] WARN  inventory-service-z.r.i.AsyncReporter$BoundedAsyncReporter.flush - Dropped 1 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 9 common frames omitted
+20-04-2026 22:36:17.640 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:38:36.981 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application INVENTORY-SERVICE with eureka with status DOWN
+20-04-2026 22:38:37.035 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704917035, current=DOWN, previous=UP]
+20-04-2026 22:38:37.156 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:38:37.718 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:38:38.391 [SpringApplicationShutdownHook] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:38:39.181 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+20-04-2026 22:38:39.303 [SpringApplicationShutdownHook] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+20-04-2026 22:38:40.123 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+20-04-2026 22:38:43.134 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+20-04-2026 22:38:43.202 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - deregister  status: 200
+20-04-2026 22:38:43.205 [SpringApplicationShutdownHook] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+20-04-2026 22:39:02.774 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarting - Starting InventoryServiceApplication using Java 22.0.2 with PID 41612 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\inventory-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+20-04-2026 22:39:02.797 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-04-2026 22:39:02.860 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+20-04-2026 22:39:02.860 [main] [-] INFO  inventory-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=inventory-service, profiles=[default], label=null, version=e830bccc3b384cd8bea9217b4dc591a19258a758, state=null
+20-04-2026 22:39:06.145 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-04-2026 22:39:06.624 [main] [-] INFO  inventory-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 468 ms. Found 1 JPA repository interface.
+20-04-2026 22:39:07.444 [main] [-] INFO  inventory-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=a277a5a6-1046-3084-9ddf-e4e1abde76e3
+20-04-2026 22:39:08.634 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+20-04-2026 22:39:08.642 [main] [-] WARN  inventory-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+20-04-2026 22:39:09.574 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+20-04-2026 22:39:09.643 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:39:09.648 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-04-2026 22:39:09.648 [main] [-] INFO  inventory-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+20-04-2026 22:39:09.863 [main] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring embedded WebApplicationContext
+20-04-2026 22:39:09.865 [main] [-] INFO  inventory-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 6996 ms
+20-04-2026 22:39:12.160 [main] [-] INFO  inventory-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-04-2026 22:39:12.376 [main] [-] INFO  inventory-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+20-04-2026 22:39:12.474 [main] [-] INFO  inventory-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+20-04-2026 22:39:13.741 [main] [-] INFO  inventory-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+20-04-2026 22:39:13.885 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-04-2026 22:39:14.448 [main] [-] INFO  inventory-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f1c406e
+20-04-2026 22:39:14.452 [main] [-] INFO  inventory-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-04-2026 22:39:16.787 [main] [-] INFO  inventory-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+20-04-2026 22:39:16.853 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+20-04-2026 22:39:16.853 [main] [-] WARN  inventory-service-o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "products" does not exist, skipping
+20-04-2026 22:39:16.989 [main] [-] INFO  inventory-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-04-2026 22:39:18.083 [main] [-] WARN  inventory-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-04-2026 22:39:18.265 [main] [-] INFO  inventory-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'order-service' URL not provided. Will try picking an instance via load-balancing.
+20-04-2026 22:39:19.965 [main] [-] INFO  inventory-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+20-04-2026 22:39:20.058 [main] [-] WARN  inventory-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20-04-2026 22:39:20.094 [main] [-] INFO  inventory-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 17 endpoints beneath base path '/actuator'
+20-04-2026 22:39:20.249 [main] [-] INFO  inventory-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+20-04-2026 22:39:20.345 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+20-04-2026 22:39:20.361 [main] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:39:20.395 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+20-04-2026 22:39:20.396 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+20-04-2026 22:39:20.396 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+20-04-2026 22:39:20.396 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+20-04-2026 22:39:20.397 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+20-04-2026 22:39:20.397 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+20-04-2026 22:39:20.397 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+20-04-2026 22:39:20.707 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+20-04-2026 22:39:20.714 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+20-04-2026 22:39:20.717 [main] [-] INFO  inventory-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20-04-2026 22:39:20.720 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1776704960719 with initial instances count: 4
+20-04-2026 22:39:20.726 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application INVENTORY-SERVICE with eureka with status UP
+20-04-2026 22:39:20.727 [main] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1776704960727, current=UP, previous=STARTING]
+20-04-2026 22:39:20.730 [main] [-] INFO  inventory-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+20-04-2026 22:39:20.730 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020: registering service...
+20-04-2026 22:39:20.812 [main] [-] INFO  inventory-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/inventory'
+20-04-2026 22:39:20.813 [main] [-] INFO  inventory-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+20-04-2026 22:39:20.822 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  inventory-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_INVENTORY-SERVICE/DESKTOP-VMQANPU.mshome.net:inventory-service:9020 - registration status: 204
+20-04-2026 22:39:20.849 [main] [-] INFO  inventory-service-c.c.e.i.InventoryServiceApplication.logStarted - Started InventoryServiceApplication in 23.543 seconds (process running for 25.364)
+20-04-2026 22:44:20.413 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:49:20.429 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:54:20.842 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 22:59:21.244 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:04:21.381 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:09:21.484 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:14:21.503 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:19:21.510 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:24:21.551 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:29:21.955 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:34:22.381 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:39:22.446 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:44:22.598 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:49:22.639 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:53:50.853 [http-nio-9020-exec-2] [-] INFO  inventory-service-o.a.c.c.C.[.[localhost].[/inventory].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-04-2026 23:53:50.911 [http-nio-9020-exec-2] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-04-2026 23:53:51.243 [http-nio-9020-exec-2] [-] INFO  inventory-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 318 ms
+20-04-2026 23:53:52.089 [http-nio-9020-exec-2] [69e66f37802a3f1804ad63b8c684ed55-04ad63b8c684ed55] INFO  inventory-service-c.c.e.i.service.ProductService.getAllInventory - Fetching all inventory items
+20-04-2026 23:54:22.687 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:59:22.717 [AsyncResolver-bootstrap-executor-%d] [-] INFO  inventory-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+20-04-2026 23:59:39.022 [http-nio-9020-exec-4] [69e6709233c0228b2a0488eb29b86bcf-2a0488eb29b86bcf] INFO  inventory-service-c.c.e.i.service.ProductService.getAllInventory - Fetching all inventory items

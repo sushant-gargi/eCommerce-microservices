@@ -1,0 +1,59 @@
+24-04-2026 23:48:45.339 [main] [-] INFO  order-service-c.c.e.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 22.0.2 with PID 15408 (D:\Downloads\e_Commerce_57fbcb1148\eCommerce\order-service\target\classes started by Sushant Gargi in D:\Downloads\e_Commerce_57fbcb1148\eCommerce)
+24-04-2026 23:48:45.343 [main] [-] INFO  order-service-c.c.e.o.OrderServiceApplication.logStartupProfileInfo - The following 1 profile is active: "dev"
+24-04-2026 23:48:45.498 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+24-04-2026 23:48:45.498 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=order-service, profiles=[default], label=null, version=02911afb28134f36d432d9ba28cf2c8e1ce6e912, state=null
+24-04-2026 23:48:45.602 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Fetching config from server at : http://localhost:8888
+24-04-2026 23:48:45.602 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.logTo - Located environment: name=order-service, profiles=[dev], label=null, version=02911afb28134f36d432d9ba28cf2c8e1ce6e912, state=null
+24-04-2026 23:48:47.473 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+24-04-2026 23:48:47.655 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interface.
+24-04-2026 23:48:48.258 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=f16a2b4d-134b-38ef-827b-7983577ef917
+24-04-2026 23:48:48.788 [main] [-] WARN  order-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+24-04-2026 23:48:48.794 [main] [-] WARN  order-service-o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+24-04-2026 23:48:49.504 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9021 (http)
+24-04-2026 23:48:49.528 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9021"]
+24-04-2026 23:48:49.538 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+24-04-2026 23:48:49.539 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/10.1.30]
+24-04-2026 23:48:49.686 [main] [-] INFO  order-service-o.a.c.c.C.[.[localhost].[/orders].log - Initializing Spring embedded WebApplicationContext
+24-04-2026 23:48:49.687 [main] [-] INFO  order-service-o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4083 ms
+24-04-2026 23:48:51.135 [main] [-] INFO  order-service-o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+24-04-2026 23:48:51.284 [main] [-] INFO  order-service-org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 6.5.3.Final
+24-04-2026 23:48:51.341 [main] [-] INFO  order-service-o.h.c.i.RegionFactoryInitiator.initiateService - HHH000026: Second-level cache disabled
+24-04-2026 23:48:51.835 [main] [-] INFO  order-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+24-04-2026 23:48:51.888 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+24-04-2026 23:48:52.122 [main] [-] INFO  order-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ae26c59
+24-04-2026 23:48:52.124 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+24-04-2026 23:48:53.574 [main] [-] INFO  order-service-o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+24-04-2026 23:48:53.705 [main] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24-04-2026 23:48:54.520 [main] [-] WARN  order-service-o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+24-04-2026 23:48:54.774 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'inventory-service' URL not provided. Will try picking an instance via load-balancing.
+24-04-2026 23:48:54.911 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'shipping-service' URL not provided. Will try picking an instance via load-balancing.
+24-04-2026 23:48:57.290 [main] [-] INFO  order-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restTemplateDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestTemplate.
+24-04-2026 23:48:57.354 [main] [-] WARN  order-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+24-04-2026 23:48:57.387 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 25 endpoints beneath base path '/actuator'
+24-04-2026 23:48:57.694 [main] [-] INFO  order-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+24-04-2026 23:48:57.725 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+24-04-2026 23:48:57.731 [main] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+24-04-2026 23:48:57.739 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+24-04-2026 23:48:57.740 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+24-04-2026 23:48:57.740 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+24-04-2026 23:48:57.740 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+24-04-2026 23:48:57.740 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+24-04-2026 23:48:57.740 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+24-04-2026 23:48:57.741 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+24-04-2026 23:48:58.070 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+24-04-2026 23:48:58.073 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+24-04-2026 23:48:58.076 [main] [-] INFO  order-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+24-04-2026 23:48:58.078 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1777054738077 with initial instances count: 2
+24-04-2026 23:48:58.090 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application ORDER-SERVICE with eureka with status UP
+24-04-2026 23:48:58.091 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1777054738091, current=UP, previous=STARTING]
+24-04-2026 23:48:58.093 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-VMQANPU.mshome.net:order-service:9021: registering service...
+24-04-2026 23:48:58.095 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9021"]
+24-04-2026 23:48:58.173 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-VMQANPU.mshome.net:order-service:9021 - registration status: 204
+24-04-2026 23:48:58.448 [main] [-] INFO  order-service-o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port 9021 (http) with context path '/orders'
+24-04-2026 23:48:58.451 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9021
+24-04-2026 23:48:58.489 [main] [-] INFO  order-service-c.c.e.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 16.743 seconds (process running for 25.316)
+24-04-2026 23:53:57.775 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+24-04-2026 23:56:53.149 [http-nio-9021-exec-1] [-] INFO  order-service-o.a.c.c.C.[.[localhost].[/orders].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-04-2026 23:56:53.351 [http-nio-9021-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+24-04-2026 23:56:54.013 [http-nio-9021-exec-1] [-] INFO  order-service-o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 660 ms
+24-04-2026 23:58:57.932 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
