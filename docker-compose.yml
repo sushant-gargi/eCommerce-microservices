@@ -1,0 +1,149 @@
+services:
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9411:9411"
+    networks:
+      - ecommerce-network
+
+  order-db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=orderDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - order-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-network
+
+  inventory-db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=inventoryDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - inventory-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-network
+
+  shipping-db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=shipping_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - shipping-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-network
+
+  discovery-service:
+    build: ./discovery-service
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - ecommerce-network
+
+  config-server:
+    build: ./config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - ecommerce-network
+
+  inventory-service:
+    build: ./inventory-service
+    ports:
+      - "9020:9020"
+    depends_on:
+      config-server:
+        condition: service_healthy
+      inventory-db:
+        condition: service_healthy
+      zipkin:
+        condition: service_started
+    networks:
+      - ecommerce-network
+
+  order-service:
+    build: ./order-service
+    ports:
+      - "9021:9021"
+    depends_on:
+      config-server:
+        condition: service_healthy
+      order-db:
+        condition: service_healthy
+      zipkin:
+        condition: service_started
+    networks:
+      - ecommerce-network
+
+  shipping-service:
+    build: ./shipping-service
+    ports:
+      - "9030:9030"
+    depends_on:
+      config-server:
+        condition: service_healthy
+      shipping-db:
+        condition: service_healthy
+      zipkin:
+        condition: service_started
+    networks:
+      - ecommerce-network
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "9000:9000"
+    depends_on:
+      config-server:
+        condition: service_healthy
+      order-service:
+        condition: service_started
+      inventory-service:
+        condition: service_started
+      shipping-service:
+        condition: service_started
+    networks:
+      - ecommerce-network
+
+volumes:
+  order-db-data:
+  inventory-db-data:
+  shipping-db-data:
+
+networks:
+  ecommerce-network:
