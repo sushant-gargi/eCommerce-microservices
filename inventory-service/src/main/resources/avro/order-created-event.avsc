@@ -1,0 +1,22 @@
+{
+  "name": "OrderCreatedEvent",
+  "namespace": "com.codingshuttle.ecommerce.events",
+  "type": "record",
+  "fields": [
+    { "name": "orderId",          "type": "long",   "default": 0 },
+    { "name": "deliveryAddress",  "type": "string", "default": "" },
+    { "name": "items", "type": {
+      "type": "array",
+      "items": {
+        "type": "record",
+        "name": "OrderItemEvent",
+        "fields": [
+          { "name": "productId", "type": "long",    "default": 0 },
+          { "name": "quantity",  "type": "int",     "default": 0 }
+        ]
+      }
+    },
+      "default": []
+    }
+  ]
+}

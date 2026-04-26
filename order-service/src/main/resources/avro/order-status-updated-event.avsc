@@ -1,0 +1,9 @@
+{
+  "name": "OrderStatusUpdatedEvent",
+  "namespace": "com.codingshuttle.ecommerce.events",
+  "type": "record",
+  "fields": [
+    { "name": "orderId",     "type": "long",   "default": 0 },
+    { "name": "orderStatus", "type": "string", "default": "" }
+  ]
+}

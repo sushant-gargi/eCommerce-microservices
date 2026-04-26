@@ -1,5 +1,6 @@
 package com.codingshuttle.ecommerce.inventory_service.service;
 
+import com.codingshuttle.ecommerce.events.OrderCreatedEvent;
 import com.codingshuttle.ecommerce.inventory_service.dto.OrderRequestDto;
 import com.codingshuttle.ecommerce.inventory_service.dto.OrderRequestItemDto;
 import com.codingshuttle.ecommerce.inventory_service.dto.ProductDto;
@@ -69,6 +70,23 @@ public class ProductService {
                     new RuntimeException("Product not found with id: " + productId));
 
             product.setStock(product.getStock() + quantity);
+            productRepository.save(product);
+        }
+    }
+
+    @Transactional
+    public void reduceStocksFromEvent(OrderCreatedEvent event) {
+        for (var item : event.getItems()) {
+            Long productId = item.getProductId();
+            int quantity = item.getQuantity();
+
+            Product product = productRepository.findById(productId)
+                    .orElseThrow(() -> new RuntimeException("Product not found: " + productId));
+
+            if (product.getStock() < quantity) {
+                throw new RuntimeException("Insufficient stock for productId: " + productId);
+            }
+            product.setStock(product.getStock() - quantity);
             productRepository.save(product);
         }
     }
