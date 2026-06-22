@@ -351,16 +351,6 @@ Each service follows the same internal layout:
 
 ---
 
-## Known Limitations
-
-- **No unit/integration tests** — the test layer is absent; this is a learning/portfolio project focused on distributed systems design
-- **Notification Service** logs events to console only — no actual email/SMS integration
-- **JWT secret** is externalized via config but a production setup would use Vault or AWS Secrets Manager
-- **Single Kafka broker** — adequate for local development; production would use a multi-broker cluster with replication factor > 1
-- **No circuit breaker wiring for Kafka** — Resilience4j is on the classpath in Order Service but not currently applied to Kafka producers
-
----
-
 ## What This Project Demonstrates
 
 | Concept | Implementation |
