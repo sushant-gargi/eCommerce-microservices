@@ -1,379 +1,347 @@
 <p align="center">
   <h1 align="center">🛒 eCommerce Microservices Platform</h1>
-</p>
-
-<p align="center">
-  <strong>Production-grade distributed e-commerce backend — built with Spring Boot 3, Kafka, and Docker</strong>
+  <p align="center">
+    <strong>Production-grade distributed eCommerce backend built with Spring Boot 3, Kafka, and Docker</strong>
+  </p>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-21-orange?logo=openjdk" alt="Java 21"/>
-  <img src="https://img.shields.io/badge/Spring%20Boot-3.3.4-brightgreen?logo=springboot" alt="Spring Boot 3.3.4"/>
-  <img src="https://img.shields.io/badge/Spring%20Cloud-2023.0.3-blue?logo=spring" alt="Spring Cloud"/>
-  <img src="https://img.shields.io/badge/Apache%20Kafka-Event%20Driven-black?logo=apachekafka" alt="Kafka"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.3.4-brightgreen?logo=springboot" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/Spring%20Cloud-2023.0.3-brightgreen?logo=spring" alt="Spring Cloud"/>
+  <img src="https://img.shields.io/badge/Apache%20Kafka-7.7.1-black?logo=apachekafka" alt="Kafka"/>
+  <img src="https://img.shields.io/badge/Docker-Compose-blue?logo=docker" alt="Docker"/>
   <img src="https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker" alt="Docker"/>
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
 </p>
 
 <p align="center">
   <a href="#architecture">Architecture</a> ·
-  <a href="#microservices">Services</a> ·
+  <a href="#services">Services</a> ·
   <a href="#tech-stack">Tech Stack</a> ·
-  <a href="#event-flow">Event Flow</a> ·
-  <a href="#getting-started">Getting Started</a> ·
-  <a href="#api-reference">API Reference</a> ·
-  <a href="#observability">Observability</a>
+  <a href="#event-driven-flow">Event Flow</a> ·
+  <a href="#resilience-patterns">Resilience</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#api-reference">API Reference</a>
 </p>
 
 ---
 
-A fully containerized, event-driven e-commerce backend demonstrating real-world microservices patterns: JWT-secured API Gateway, service discovery, centralized config management, Kafka-based async communication with Avro schema enforcement, distributed tracing, and per-service PostgreSQL databases — all orchestrated with Docker Compose.
+## What This Project Demonstrates
+
+A **fully containerized**, event-driven eCommerce backend that showcases production-level backend engineering skills:
+
+| Capability | Implementation |
+|:---|:---|
+| **Microservices Architecture** | 6 independent Spring Boot services with isolated databases |
+| **Event-Driven Communication** | Apache Kafka with Avro schema enforcement via Confluent Schema Registry |
+| **API Security** | JWT authentication + role-based access control at the API Gateway |
+| **Resilience Engineering** | Circuit Breakers, Retry, Rate Limiting via Resilience4j |
+| **Distributed Tracing** | Full trace propagation with Zipkin + Micrometer |
+| **Centralized Config** | Spring Cloud Config Server backed by a Git repository |
+| **Service Discovery** | Netflix Eureka for dynamic service registration and load balancing |
+| **Containerization** | Full Docker Compose orchestration with health checks and startup ordering |
 
 ---
 
 ## Architecture
 
 ```
-                            ┌──────────────────────────┐
-                            │       API Gateway         │
-                            │   :9000 (Spring Cloud)    │
-                            │  JWT Auth · Role Filter   │
-                            │  Global Logging Filter    │
-                            └──────────┬───────────────┘
-                                       │
-              ┌────────────────────────┼──────────────────────────┐
-              ▼                        ▼                           ▼
-    ┌─────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐
-    │  Order Service  │    │  Inventory Service  │    │  Shipping Service   │
-    │     :9021       │    │       :9020         │    │       :9030         │
-    │   (order-db)    │    │  (inventory-db)     │    │   (shipping-db)     │
-    └────────┬────────┘    └──────────┬──────────┘    └─────────────────────┘
-             │                        │
-             │   Kafka Events (Avro)  │
-             ▼                        ▼
-    ┌────────────────────────────────────────────┐
-    │              Apache Kafka + Schema Registry │
-    │   order-created ──────────────────────────► inventory-service (reduce stock)
-    │   order-status-updated ◄─────────────────── inventory-service (FULFILLED / OUT_OF_STOCK)
-    │   order-created + order-status-updated ───► notification-service (log/notify)
-    └────────────────────────────────────────────┘
-             │
-             ▼
-    ┌─────────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-    │  Notification Svc   │    │  Discovery Svc   │    │  Config Server  │
-    │       :9040         │    │  (Eureka) :8761  │    │     :8888       │
-    └─────────────────────┘    └──────────────────┘    └─────────────────┘
-             │
-             ▼
-    ┌─────────────────────┐
-    │  Zipkin (Tracing)   │
-    │        :9411        │
-    └─────────────────────┘
+                          ┌─────────────────────────────────────┐
+                          │         CLIENT (REST API)            │
+                          └──────────────┬──────────────────────┘
+                                         │
+                          ┌──────────────▼──────────────────────┐
+                          │           API GATEWAY  :9000         │
+                          │  JWT Auth · Role-Based Routing       │
+                          │  GlobalLoggingFilter · StripPrefix   │
+                          └──────┬────────────┬─────────┬───────┘
+                                 │            │         │
+               ┌─────────────────▼──┐  ┌──────▼───┐  ┌─▼─────────────┐
+               │  ORDER SERVICE     │  │INVENTORY │  │SHIPPING       │
+               │  :9021             │  │SERVICE   │  │SERVICE :9030  │
+               │  [USER, ADMIN]     │  │:9020     │  │[USER, ADMIN]  │
+               │                   │  │[ADMIN]   │  │               │
+               └──────┬────────────┘  └──────────┘  └───────────────┘
+                      │  Kafka Events
+         ┌────────────▼────────────────────┐
+         │         KAFKA + SCHEMA REGISTRY  │
+         │  order_created · order_status_updated  │
+         └───────────┬──────────────────────┘
+                     │  Consumes events
+         ┌───────────▼──────────┐   ┌──────────────────────┐
+         │  INVENTORY SERVICE   │   │  NOTIFICATION SERVICE │
+         │  (stock management)  │   │  (audit logging)      │
+         └──────────────────────┘   └──────────────────────┘
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │              INFRASTRUCTURE LAYER                            │
+  │  Config Server :8888 · Discovery Service :8761 · Zipkin :9411│
+  └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Microservices
+## Services
 
-| Service | Port | Responsibility | Key Tech |
-|:--------|:----:|:---------------|:---------|
-| **API Gateway** | 9000 | Single entry point — JWT validation, role-based routing, global request/response logging | Spring Cloud Gateway, JJWT 0.12.6 |
-| **Order Service** | 9021 | Create/manage orders, publish `OrderCreatedEvent` via Kafka, consume `OrderStatusUpdatedEvent` to sync status | Spring Data JPA, Kafka Producer/Consumer, Avro |
-| **Inventory Service** | 9020 | Stock management, consumes `OrderCreatedEvent` to reduce stock, publishes `OrderStatusUpdatedEvent` (FULFILLED / OUT_OF_STOCK) | Spring Data JPA, Kafka Producer/Consumer, OpenFeign |
-| **Shipping Service** | 9030 | Handles shipment records; called synchronously by Order Service via Feign | Spring Data JPA, ModelMapper |
-| **Notification Service** | 9040 | Listens to both Kafka topics and logs order/status events (extensible to email/SMS) | Spring Kafka, Avro |
-| **Discovery Service** | 8761 | Eureka server — service registry for all microservices | Spring Cloud Netflix Eureka |
-| **Config Server** | 8888 | Centralized configuration via Git-backed repo with retry and fail-fast support | Spring Cloud Config Server |
+### 🔀 API Gateway — Port 9000
+The single entry point for all client traffic. Built on Spring Cloud Gateway (reactive WebFlux).
+
+- **JWT Authentication Filter** — validates Bearer tokens, extracts `userId` and `roles`, forwards as `X-User-Id` / `X-User-Roles` headers to downstream services
+- **Role-based routing** — `ORDER` and `SHIPPING` services require `USER` or `ADMIN`; `INVENTORY` management restricted to `ADMIN` only
+- **Custom filters** — `LoggingOrdersFilter` for per-route logging; `GlobalLoggingFilter` for request/response lifecycle tracing
+- **Config-server integration** — routes, JWT secret, and Eureka registration all pulled from the central config repo
+
+### 📦 Order Service — Port 9021
+Core business service. Handles the full order lifecycle.
+
+- Creates orders by **synchronously calling Inventory** (via OpenFeign) to reduce stock and **Shipping** to initiate delivery
+- Publishes `OrderCreatedEvent` to Kafka on successful order placement
+- Listens for `OrderStatusUpdatedEvent` from Inventory to reflect fulfillment or out-of-stock state
+- Supports order cancellation with automatic inventory restocking via Feign
+- **Resilience4j** configuration: retry (3 attempts, 200ms wait), circuit breaker (10-call sliding window, 50% failure threshold, 1s open state), and rate limiter (100 req/s) on inventory calls
+
+### 🗃️ Inventory Service — Port 9020
+Manages product catalog and stock levels with a seeded dataset of 20 products.
+
+- Exposes REST endpoints for listing products, reducing stock on orders, and restocking on cancellations
+- **Kafka Consumer** — listens on `order_created` topic; reduces stock and publishes `OrderStatusUpdatedEvent` (`FULFILLED` or `OUT_OF_STOCK`)
+- Cross-service Feign client to Order Service for inter-service communication demonstration
+- Seeded with a `data.sql` script (smartphones, laptops, VR headsets, and more)
+
+### 🚚 Shipping Service — Port 9030
+Handles shipping record creation and tracking.
+
+- Accepts shipping requests from Order Service via synchronous Feign call
+- Persists shipping records to its own dedicated PostgreSQL database
+- Returns shipping status and confirmation to Order Service
+
+### 🔔 Notification Service — Port 9040
+Purely event-driven notification handler — no REST endpoints.
+
+- Consumes both `order_created` and `order_status_updated` Kafka topics
+- Logs structured order lifecycle notifications (extensible to email/SMS integrations)
+- Demonstrates a **fanout event consumer** pattern where multiple services react to the same event
+
+### 🔍 Discovery Service — Port 8761
+Netflix Eureka Server for service registry and client-side load balancing. All services register on startup and use `lb://service-name` URIs.
+
+### ⚙️ Config Server — Port 8888
+Spring Cloud Config Server backed by the [ecommerce-config-server](https://github.com/sushant-gargi/ecommerce-config-server) Git repository.
+
+- Serves per-service YAML/properties files centrally
+- Supports **environment profiles** (`dev`, `prod`) — Order Service has a `order-service-dev.properties` override
+- `@RefreshScope` beans in Order Service pick up live config changes without restarts
 
 ---
 
 ## Tech Stack
 
-### Core
-- **Java 21** — LTS with modern language features
-- **Spring Boot 3.3.4** — auto-configuration, production-ready defaults
-- **Spring Cloud 2023.0.3** — Gateway, Config, Eureka, OpenFeign, Resilience4j
-
-### Messaging
-- **Apache Kafka** (KRaft mode, no Zookeeper) — event streaming
-- **Confluent Schema Registry** — Avro schema enforcement across producers/consumers
-- **Apache Avro** — strongly-typed, schema-evolved event contracts (`OrderCreatedEvent`, `OrderStatusUpdatedEvent`)
-
-### Data
-- **PostgreSQL 15** — one dedicated database per service (true data isolation)
-- **Spring Data JPA / Hibernate** — ORM with `@Transactional` stock deduction
-
-### Infrastructure
-- **Docker Compose** — full stack orchestration with health checks and dependency ordering
-- **Spring Cloud API Gateway** — reactive gateway with custom `GatewayFilterFactory`
-- **Spring Cloud Config** — externalized config from Git with `@RefreshScope` hot-reload
-- **Netflix Eureka** — service registry and client-side load balancing
-
-### Observability
-- **Micrometer + Brave** — distributed trace instrumentation
-- **Zipkin** — trace visualization across all services
-- **Logback** — structured logging with `traceId` and `spanId` embedded in every log line, rolling file appenders (10 MB / 30 days)
-- **Spring Boot Actuator** — health endpoints and metrics
-
-### Security
-- **JJWT 0.12.6** — JWT parsing in the API Gateway
-- Custom `AuthenticationGatewayFilterFactory` — validates Bearer tokens, extracts `userId` and `roles`, forwards as `X-User-Id` / `X-User-Roles` headers to downstream services
+| Layer | Technology |
+|:---|:---|
+| **Language & Runtime** | Java 21, Spring Boot 3.3.4 |
+| **Service Mesh** | Spring Cloud 2023.0.3, Netflix Eureka, Spring Cloud Gateway |
+| **Messaging** | Apache Kafka (KRaft mode), Confluent Schema Registry, Apache Avro |
+| **Persistence** | Spring Data JPA, PostgreSQL 15 (separate DB per service) |
+| **Resilience** | Resilience4j (Circuit Breaker, Retry, Rate Limiter) |
+| **Security** | JWT (jjwt 0.12.6), HMAC-SHA256 |
+| **Service Communication** | OpenFeign with Micrometer instrumentation |
+| **Observability** | Micrometer Tracing, Zipkin, structured Logback (traceId/spanId in every log line) |
+| **Configuration** | Spring Cloud Config Server (Git-backed) |
+| **Containerization** | Docker, Docker Compose (multi-container with health checks) |
+| **Build** | Maven 3.9.4, Eclipse Temurin 21 Alpine images |
 
 ---
 
-## Event Flow
-
-Order placement triggers a fully asynchronous, event-driven pipeline:
+## Event-Driven Flow
 
 ```
-POST /orders/core/create-order
-         │
-         ▼
-   Order Service
-   ─ saves order with status PENDING
-   ─ publishes OrderCreatedEvent (Avro) → Kafka [order-created, 3 partitions]
-         │
-         ├──► Inventory Service (consumer group: inventory)
-         │     ─ reduces stock transactionally
-         │     ─ if stock OK  → publishes OrderStatusUpdatedEvent { status: "FULFILLED" }
-         │     ─ if stock low → publishes OrderStatusUpdatedEvent { status: "OUT_OF_STOCK" }
-         │
-         └──► Notification Service (consumer group: notification)
-               ─ logs order event (hook for email/SMS/push)
-
-   Kafka [order-status-updated]
-         │
-         ├──► Order Service
-         │     ─ updates order status in DB (PENDING → FULFILLED / OUT_OF_STOCK)
-         │
-         └──► Notification Service
-               ─ logs status change
+  Client
+    │
+    ├─ POST /api/v1/orders/core/create-order
+    │
+  Order Service
+    ├─ Feign → Inventory Service (reduce stocks) ──── Resilience4j [retry + circuit breaker]
+    ├─ Feign → Shipping Service (ship order)
+    ├─ Persist Order (PENDING)
+    └─ Publish ──► Kafka: order_created (Avro)
+                          │
+            ┌─────────────┼────────────────┐
+            │                              │
+  Inventory Service                Notification Service
+  Consumes order_created          Consumes order_created
+  Reduces stock                   Logs order event
+  Publishes ──► order_status_updated
+                          │
+                  Order Service
+                  Consumes status update
+                  Updates Order → FULFILLED / OUT_OF_STOCK
+                          │
+                  Notification Service
+                  Consumes status update
+                  Logs fulfillment event
 ```
 
-**Avro schemas** define the event contracts — breaking changes are caught at the Schema Registry before reaching consumers.
+**Avro Schemas** enforce message contracts across producers and consumers:
+
+```json
+// OrderCreatedEvent
+{ "orderId": long, "deliveryAddress": string, "items": [{ "productId": long, "quantity": int }] }
+
+// OrderStatusUpdatedEvent  
+{ "orderId": long, "orderStatus": string }
+```
 
 ---
 
-## Getting Started
+## Resilience Patterns
 
-### Prerequisites
-- Docker Desktop (with Compose v2)
-- Git
+The Order Service implements a layered resilience strategy for downstream calls:
 
-### Clone and Run
+```
+Resilience4j on inventoryClient:
+  ├── Rate Limiter:    100 req/s, 10ms timeout
+  ├── Retry:          3 attempts, 200ms wait
+  └── Circuit Breaker:
+        sliding window: 10 calls (COUNT_BASED)
+        failure threshold: 50%
+        open state wait: 1s
+        half-open probe: 3 calls
+```
+
+---
+
+## Distributed Tracing
+
+Every log line includes `traceId` and `spanId` via Logback pattern:
+
+```
+22-06-2026 12:30:45.123 [reactor-http] [a1b2c3d4-e5f6] INFO order-service - Order created: id=42
+```
+
+Traces are exported to **Zipkin** at `http://localhost:9411` with 100% sampling rate, giving full request graphs across Gateway → Order → Inventory → Shipping.
+
+---
+
+## Quick Start
+
+**Prerequisites:** Docker and Docker Compose installed.
 
 ```bash
-git clone https://github.com/<your-username>/ecommerce-microservices.git
-cd ecommerce-microservices
+# 1. Clone the repository
+git clone https://github.com/sushant-gargi/eCommerce-microservices.git
+cd eCommerce-microservices
+
+# 2. Start the full stack
 docker compose up --build
+
+# Services start in dependency order:
+#   Zipkin → Kafka → Schema Registry → Databases →
+#   Discovery → Config → Services → API Gateway
 ```
 
-Docker Compose starts services in dependency order with health checks:
+Once running, services are accessible at:
 
-1. Zipkin, Kafka (KRaft), Schema Registry, PostgreSQL instances
-2. Discovery Service (Eureka)
-3. Config Server (waits for Eureka to be healthy)
-4. Inventory, Order, Shipping, Notification Services (wait for Config Server + DB + Kafka)
-5. API Gateway (waits for business services)
-
-> **First build:** Maven downloads dependencies inside containers — allow 5–10 minutes on a fresh machine.
-
-### Verify Everything Is Up
-
-```bash
-# Eureka dashboard — all services should appear registered
-open http://localhost:8761
-
-# Zipkin trace UI
-open http://localhost:9411
-
-# Kafka Schema Registry subjects
-curl http://localhost:8081/subjects
-
-# Inventory service health
-curl http://localhost:9000/inventory/products
-```
-
-### Sample API Calls (via API Gateway on port 9000)
-
-**Create an Order:**
-```bash
-curl -X POST http://localhost:9000/orders/core/create-order \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <your-jwt-token>" \
-  -d '{
-    "deliveryAddress": "123 Main Street, Gaya, Bihar",
-    "items": [
-      { "productId": 1, "quantity": 2 },
-      { "productId": 5, "quantity": 1 }
-    ]
-  }'
-```
-
-**Get All Products (Inventory):**
-```bash
-curl http://localhost:9000/inventory/products \
-  -H "Authorization: Bearer <your-jwt-token>"
-```
-
-**Check Order Status:**
-```bash
-curl http://localhost:9000/orders/core/{orderId} \
-  -H "Authorization: Bearer <your-jwt-token>"
-```
-
-**Cancel an Order:**
-```bash
-curl -X PUT http://localhost:9000/orders/core/cancel-order/{orderId} \
-  -H "Authorization: Bearer <your-jwt-token>"
-```
+| Service | URL |
+|:---|:---|
+| API Gateway | http://localhost:9000 |
+| Discovery (Eureka UI) | http://localhost:8761 |
+| Config Server | http://localhost:8888 |
+| Zipkin Tracing UI | http://localhost:9411 |
+| Schema Registry | http://localhost:8081 |
+| Inventory Service | http://localhost:9020 |
+| Order Service | http://localhost:9021 |
+| Shipping Service | http://localhost:9030 |
+| Notification Service | http://localhost:9040 |
 
 ---
 
 ## API Reference
 
-### Order Service (`/orders`)
+All requests through the **API Gateway** require a valid JWT Bearer token (except for admin-only inventory endpoints, which require `ADMIN` role).
 
-| Method | Endpoint | Description |
-|:-------|:---------|:------------|
-| `POST` | `/core/create-order` | Place a new order; triggers Kafka event pipeline |
-| `GET` | `/core` | List all orders |
-| `GET` | `/core/{id}` | Get order by ID |
-| `PUT` | `/core/cancel-order/{id}` | Cancel an order |
-
-### Inventory Service (`/inventory`)
-
-| Method | Endpoint | Description |
-|:-------|:---------|:------------|
-| `GET` | `/products` | List all products with stock levels |
-| `GET` | `/products/{id}` | Get single product |
-| `PUT` | `/products/reduce-stocks` | Reduce stock (called internally / via Kafka) |
-| `PUT` | `/products/restock` | Restock items |
-
-### Shipping Service (`/shipping`)
-
-| Method | Endpoint | Description |
-|:-------|:---------|:------------|
-| `POST` | `/orders/ship` | Initiate shipment for an order |
-| `GET` | `/orders` | List all shipments |
-| `GET` | `/orders/order/{orderId}` | Get shipping record by order ID |
-
----
-
-## Security — API Gateway Auth Filter
-
-All routes pass through the `AuthenticationGatewayFilterFactory`. The filter:
-
-1. Reads the `Authorization: Bearer <token>` header
-2. Parses and validates the JWT using HMAC-SHA secret key (JJWT 0.12.6)
-3. Extracts `userId` (from JWT subject) and `roles` (from JWT claims)
-4. Checks roles against `allowedRoles` config per route — returns `403` if unauthorized
-5. Forwards `X-User-Id` and `X-User-Roles` headers to downstream services
-
-Downstream services trust these headers — no repeated JWT parsing across the cluster.
-
----
-
-## Observability
-
-### Distributed Tracing
-
-Every service is instrumented with **Micrometer + Brave**. Each request generates a `traceId` and `spanId` that flow through HTTP calls (via Feign) and Kafka messages. Traces are exported to **Zipkin** at `http://localhost:9411`.
-
-Log pattern embedded in Logback across all services:
-```
-%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] [%X{traceId}-%X{spanId}] %-5level <service>-%logger{36}.%M - %msg%n
+```http
+Authorization: Bearer <jwt-token>
 ```
 
-### Logging
+### Orders  `[USER, ADMIN]`
 
-Each service writes structured logs to:
-- **Console** (stdout) — for Docker log aggregation
-- **Rolling file** (`logs/<service-name>/application-yyyy-MM-dd.N.log`) — 10 MB per file, 30-day retention
+```http
+POST   /api/v1/orders/core/create-order     # Create a new order
+GET    /api/v1/orders/core                  # List all orders
+GET    /api/v1/orders/core/{id}             # Get order by ID
+PUT    /api/v1/orders/core/cancel-order/{id}# Cancel an order (restocks inventory)
+```
 
-### Health Checks
+**Create Order Request:**
+```json
+{
+  "deliveryAddress": "123 Main St, Mumbai",
+  "items": [
+    { "productId": 1, "quantity": 2 },
+    { "productId": 5, "quantity": 1 }
+  ]
+}
+```
 
-All services expose `GET /actuator/health` — used by Docker Compose for startup dependency ordering.
+### Inventory  `[ADMIN only]`
 
----
+```http
+GET  /api/v1/inventory/products             # List all products
+GET  /api/v1/inventory/products/{id}        # Get product by ID
+PUT  /api/v1/inventory/products/reduce-stocks
+PUT  /api/v1/inventory/products/restock
+```
 
-## Dynamic Config with `@RefreshScope`
+### Shipping  `[USER, ADMIN]`
 
-The **Config Server** reads from a Git-backed config repository. The Order Service uses `@RefreshScope` on controllers and config beans — calling `POST /actuator/refresh` reloads values like `features.user-tracking-enabled` and `my.variable` at runtime without restarting the container.
-
----
-
-## Kafka Infrastructure Details
-
-| Topic | Partitions | Producers | Consumers |
-|:------|:----------:|:----------|:----------|
-| `order-created` | 3 | Order Service | Inventory Service, Notification Service |
-| `order-status-updated` | 3 | Inventory Service | Order Service, Notification Service |
-
-- **KRaft mode** — no Zookeeper dependency
-- **Confluent Schema Registry** enforces Avro schemas, prevents breaking event changes
-- Messages are keyed by `orderId` — ensures ordering per order within partitions
+```http
+POST /api/v1/shipping/orders/ship           # Ship an order
+GET  /api/v1/shipping/orders                # List all shipments
+GET  /api/v1/shipping/orders/{id}           # Get shipment by ID
+```
 
 ---
 
 ## Project Structure
 
 ```
-ecommerce-microservices/
-├── api-gateway/              # Spring Cloud Gateway + JWT filter
-├── config-server/            # Spring Cloud Config Server (Git-backed)
-├── discovery-service/        # Netflix Eureka Server
-├── order-service/            # Order CRUD + Kafka producer/consumer
-├── inventory-service/        # Stock management + Kafka consumer/producer
-├── shipping-service/         # Shipment records
-├── notification-service/     # Event logging (Kafka consumer)
-└── docker-compose.yml        # Full stack orchestration
-```
-
-Each service follows the same internal layout:
-```
-<service>/
-├── src/main/java/
-│   └── com/codingshuttle/ecommerce/<service>/
-│       ├── config/           # Spring beans, Kafka topics, feature flags
-│       ├── controller/       # REST endpoints
-│       ├── service/          # Business logic
-│       ├── entity/           # JPA entities
-│       ├── dto/              # Request/Response DTOs
-│       ├── repository/       # Spring Data JPA repositories
-│       └── consumer/         # Kafka listeners (where applicable)
-├── src/main/resources/
-│   └── avro/                 # Avro schema definitions
-├── Dockerfile                # Maven multi-stage build (eclipse-temurin-21-alpine)
-└── pom.xml
+eCommerce-microservices/
+├── api-gateway/            # JWT auth, routing, global filters
+├── config-server/          # Spring Cloud Config (Git-backed)
+├── discovery-service/      # Netflix Eureka Server
+├── inventory-service/      # Product catalog, stock management
+│   └── resources/avro/     # Avro schema definitions
+├── notification-service/   # Event consumer for notifications
+├── order-service/          # Order lifecycle, Feign clients, Kafka producer
+│   └── resources/avro/     # Avro schema definitions
+├── shipping-service/       # Shipping record management
+├── logs/                   # Mounted log volumes (per-service rolling logs)
+└── docker-compose.yml      # Full stack orchestration
 ```
 
 ---
 
-## What This Project Demonstrates
+## Key Design Decisions
 
-| Concept | Implementation |
-|:--------|:--------------|
-| API Gateway pattern | Spring Cloud Gateway with custom `AbstractGatewayFilterFactory` |
-| Service discovery | Netflix Eureka with client-side load balancing via OpenFeign |
-| Centralized config | Spring Cloud Config Server backed by Git, with `@RefreshScope` hot-reload |
-| Event-driven architecture | Kafka + Avro with Schema Registry — typed, schema-versioned events |
-| Database-per-service | Three separate PostgreSQL instances (order-db, inventory-db, shipping-db) |
-| Distributed tracing | Micrometer Brave → Zipkin, `traceId/spanId` in every log line |
-| Containerized deployment | Full Docker Compose stack with health checks and dependency ordering |
-| Reactive gateway | Spring WebFlux-based API Gateway with `ServerWebExchange` request mutation |
-| Transactional stock deduction | `@Transactional` stock reduce/restock in Inventory Service |
-| Role-based access control | JWT claims extraction + role filtering at the gateway layer |
+**Database per Service** — Each service owns its PostgreSQL schema, enforcing bounded context isolation and preventing tight coupling via shared databases.
+
+**Avro + Schema Registry** — Kafka messages use Avro serialization with a central Schema Registry, ensuring backward/forward-compatible schema evolution across producer and consumer upgrades.
+
+**Synchronous + Async hybrid** — Stock reduction on order creation happens synchronously (Feign) for immediate consistency; status propagation is asynchronous (Kafka) for loose coupling and resilience.
+
+**Centralized Externalized Config** — All environment-specific config lives in a separate Git repo (`ecommerce-config-server`), making environment promotion (dev → prod) a config-only change with zero code modification.
+
+**`@RefreshScope`** — Feature flags (e.g., `user-tracking-enabled`) can be toggled live via Spring Actuator `/actuator/refresh` without service restart.
 
 ---
 
 ## License
 
-MIT — free to use, fork, and build upon.
+MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
 <p align="center">
-  Built with ☕ Java 21 · Spring Boot 3 · Apache Kafka · Docker
+  <sub>Built with ☕ Java 21 · Spring Boot 3 · Kafka · Docker</sub>
 </p>
